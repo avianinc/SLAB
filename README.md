@@ -34,7 +34,7 @@ Note: If you go to `http://localhost:8080/v3/swagger-ui/index.html` it takes you
 ToDo:
 
 - Test out the other MDKs in particular Matlab and JupyterLab
-- Integrate the system with the model versioning tool Lemontree removing any need for TWC. There is a plugin here https://github.com/danielsiegl/LemonTreePublicDemo that I hear will work. I'm going to be working to make this happen. (https://www.lieberlieber.com/lemontree/en/)
+- Integrate the system with the model versioning tool Lemontree removing any need for TWC. There is an example here https://github.com/danielsiegl/OpenMBEEwithGitDemo that I hear will work (not tested). I'm going to be working to make this happen. (https://www.lieberlieber.com/lemontree/en/)
 - Work to install ve4 where (I believe) a local Confluence installation can act as a visual editor. (Still need some work on my part here to make sure I know what Im talking about)
 - Look at alternates for Minio as the artifact repo. Boeing is using MarkLogic for performing RDF graph queries on SysML data (https://cdn1.marklogic.com/wp-content/uploads/2019/06/MLW19-Boeing-Querying-Model-Based-Systems-Definition-Data.pdf)
 - Create and include an Ares PLM container to start developing a prepackaged installation.
