@@ -28,9 +28,9 @@ Also Note: In cameo set the url for the mms server to `http://localhost:8080` (f
     - `curl -X GET -u test "http://localhost:8080/authentication"`
     - Note: if you receive error: `curl: (1) Protocol "'https" not supported or disabled in libcurl` this is typically due to improper translation of copied quotation marks... retyping the quotations marks should fix this issue. 
     - Copy the token... its the long annoying text between the quotation marks, and enter it into the `bearerToken` area of the authorization section of the API.
-6. When using the Visual Editor as the test user the upper right corner will look a little messy. This is due to the test user not having a first and last name. To correct just add a new user and provide a first and last name. You will see the users initials instead of the weird looking text once performed.
+6. When using the Visual Editor as the test user the upper right corner will look a little messy. This is due to the test user not having a first and last name. To correct just add a new user and provide a first and last name and login as the new user. You will see the users initials instead of the weird looking text once performed.
 7. When running the initial docker compose up command there may be issues with the gradle and associated file downloads. This is generally due to a slow internet connection and can occur when on a wireless network. Moving to a high speed wired network will typically fix the issue.
-8. Make sure you install the MDK plugin from the included `cameo_mdk_5.0.1` folder in your Cameo or MD installation. Follow the included help files from the Cameo help menu to start working with OpenMBEE :). Let me know if you are having issues... I dont mind working these things out.
+8. Make sure you install the MDK plugin from the included `cameo_mdk_5.0.1` folder in your Cameo or MD installation. Follow the included help files from the Cameo help menu to start working with OpenMBEE :). Let me know if you are having issues... I don't mind working these things out.
 
 ToDo:
 
