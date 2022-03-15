@@ -17,7 +17,7 @@ To run open powershell and:
 Thats it... so here are some notes on the features and issues.
 
 1. The docker compose file creates local volumes for persistent storage. The noted setup seems to work but may not be 100% correct yet.
-2. To configure the OpenMBEE installation one must modify the config file `application-test.properties`. Not much needed for a local installation but worth a lookie-loo. Per the properties file the admin account:
+2. To configure the OpenMBEE installation one must modify the config file `example\bin\application-test.properties`. Not much needed for a local installation but worth a lookie-loo. Per the properties file the admin account:
     - Username: test
     - Password: test
 3. The visual editor is located at: `http://localhost`
