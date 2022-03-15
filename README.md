@@ -22,7 +22,7 @@ Thats it... so here are some notes on the features and issues.
     - Password: test
 3. The visual editor is located at: `http://localhost`
 4. The example API is located at: `http://localhost:8080/v3/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config`<br>
-Note: If you go to `http://localhost:8080/v3/swagger-ui/index.html` it takes you to some sort of pet store example???
+Note: If you go to `http://localhost:8080/v3/swagger-ui/index.html` it takes you to some sort of pet store example???<br>
 Also Note: In cameo set the url for the mms server to `http://localhost:8080` (follow all other directions...)
 5. For some reason the API authorize function only accepts a bearerToken... not sure why one cannot login with the standard un/pw and this issue was a surprise to the group. Need to fix. In the meantime one can obtain the token with a curl call from windows command prompt... doesn't seem to work with powershell nor anaconda shell:
     - `curl -X GET -u test "http://localhost:8080/authentication"`
