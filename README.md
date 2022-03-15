@@ -1,6 +1,6 @@
 # OpenMBEE - MMS(4.0.7) w/Visual Editor and Cameo MDK Plugin
 
-OK... Let me go through this. It was a tough learn and a bit if this setup is not working as advertized but its a great head start for all you regular engineers (like me...) to get going with a full fledged OpenMBEE installation with little overhead. 
+OK... Let me go through this. It was a tough learn and a bit of this setup is not working as advertized but its a great head start for all you regular engineers (like me...) to get going with a full fledged OpenMBEE installation with little overhead. 
 
 Whats included:
 - MMS 4.0.7
