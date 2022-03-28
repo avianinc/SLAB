@@ -64,7 +64,7 @@ services:
 
 # this was fun... the remove rootscope is working with the rest of the tools
 # https://github.com/Open-MBEE/ve/tree/feature/remove-rootscope
-  ve_os:
+  ve:
     build:    
       context:  ./ve-feature-remove-rootscope
       # context:  ./ve_backport_os
