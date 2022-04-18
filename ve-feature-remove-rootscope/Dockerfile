@@ -11,7 +11,8 @@
 ################################################################################
 FROM node:8
 
-ENV VE_ENV 'example'
+#ENV VE_ENV 'example'
+ENV VE_ENV 'avian'
 
 WORKDIR /opt/mbee/ve
 COPY . /opt/mbee/ve
