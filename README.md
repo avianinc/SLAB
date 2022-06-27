@@ -20,17 +20,20 @@ Thats it... so here are some notes on the features and issues.
 2. To configure the OpenMBEE installation one must modify the config file `example\bin\application-test.properties`. Not much needed for a local installation but worth a lookie-loo. Per the properties file the admin account:
     - Username: test
     - Password: test
-3. The visual editor is located at: `http://localhost`
-4. The example API is located at: `http://localhost:8080/v3/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config`<br>
+3. Create a user specific config for the VE here --> ve-feature-remove-rootscope/app/config
+    - In our case we made a `config.avian.js` includeding the correct API url
+    - In the ve docker file change the ENV VE_ENV 'avian' varialbe to the configue file base name (in this case its `avian`)
+4. The visual editor is located at: `http://localhost`
+5. The example API is located at: `http://localhost:8080/v3/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config`<br>
 Note: If you go to `http://localhost:8080/v3/swagger-ui/index.html` it takes you to some sort of pet store example???<br>
 Also Note: In cameo set the url for the mms server to `http://localhost:8080` (follow all other directions...)
-5. For some reason the API authorize function only accepts a bearerToken... not sure why one cannot login with the standard un/pw and this issue was a surprise to the group. Need to fix. In the meantime one can obtain the token with a curl call from windows command prompt... doesn't seem to work with powershell nor anaconda shell:
+6. For some reason the API authorize function only accepts a bearerToken... not sure why one cannot login with the standard un/pw and this issue was a surprise to the group. Need to fix. In the meantime one can obtain the token with a curl call from windows command prompt... doesn't seem to work with powershell nor anaconda shell:
     - `curl -X GET -u test "http://localhost:8080/authentication"`
     - Note: if you receive error: `curl: (1) Protocol "'https" not supported or disabled in libcurl` this is typically due to improper translation of copied quotation marks... retyping the quotations marks should fix this issue. 
     - Copy the token... its the long annoying text between the quotation marks, and enter it into the `bearerToken` area of the authorization section of the API.
-6. When using the Visual Editor as the test user the upper right corner will look a little messy. This is due to the test user not having a first and last name. To correct just add a new user and provide a first and last name and login as the new user. You will see the users initials instead of the weird looking text once performed.
-7. When running the initial docker compose up command there may be issues with the gradle and associated file downloads. This is generally due to a slow internet connection and can occur when on a wireless network. Moving to a high speed wired network will typically fix the issue.
-8. Make sure you install the MDK plugin from the included `cameo_mdk_5.0.1` folder in your Cameo or MD installation. Follow the included help files from the Cameo help menu to start working with OpenMBEE :). Let me know if you are having issues... I don't mind working these things out.
+7. When using the Visual Editor as the test user the upper right corner will look a little messy. This is due to the test user not having a first and last name. To correct just add a new user and provide a first and last name and login as the new user. You will see the users initials instead of the weird looking text once performed.
+8. When running the initial docker compose up command there may be issues with the gradle and associated file downloads. This is generally due to a slow internet connection and can occur when on a wireless network. Moving to a high speed wired network will typically fix the issue.
+9. Make sure you install the MDK plugin from the included `cameo_mdk_5.0.1` folder in your Cameo or MD installation. Follow the included help files from the Cameo help menu to start working with OpenMBEE :). Let me know if you are having issues... I don't mind working these things out.
 
 ToDo:
 
