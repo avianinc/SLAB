@@ -10,7 +10,7 @@ OK... Let me go through this. It was a tough learn and a bit of this setup is no
 ## Notes:
 This setup has only been tested using 19.0SP4 and TWC 19. Not sure how it will work with 20X yet. I'll test in the next couple of weeks and update as necessary. 
 
-## Edits Required for a specfic setup:
+## Edits required for a specfic setup:
 A review of the main commits will give you an idea of what to do but here they are in written form to help.
 <br>
 - In the ```ve-feature-remove-rootscope/app/config/``` folder create a configuration file specific to your needs. Here I created a file called ```config.avian.js``` (just copy the config.example.js and rename) where ```apiUrl``` is set to your IP. I have not tried this with a dns name. The baseUrl can be left blank. The rest can be per your needs. <br><br>
