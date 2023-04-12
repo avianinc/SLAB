@@ -2,17 +2,34 @@
 
 OK... Let me go through this. It was a tough learn and a bit of this setup is not working as advertized but its a great head start for all you regular engineers (like me...) to get going with a full fledged OpenMBEE installation with little overhead. 
 
-Whats included:
+## Whats included:
 - MMS 4.0.7
 - VE 3.6.1 - must use branch feature/remove-rootscope (per https://openmbee.slack.com/archives/C3XR7DZ7C/p1643999205072539) its already here so dont worry.
 - MDK 5.0.1 - Local build located in the `cameo_mdk_5.0.1` folder
+
+## Notes:
+This setup has only been tested using 19.0SP4 and TWC 19. Not sure how it will work with 20X yet. I'll test in the next couple of weeks and update as necessary. 
+
+## Edits Required for a specfic setup:
+- A review of the main commits will give you an idea of what to do but here they are in written form to help.
+    1. In the ```ve-feature-remove-rootscope/app/config/``` folder create a configuration file specific to your needs. Here I created a file called ```config.avian.js``` (just copy the config.example.js and rename) where ```apiUrl``` is set to your IP. I have not tried this with a dns name. The baseUrl can be left blank. The rest can be per your needs. <br>
+    <br>
+    See commit - https://github.com/avianinc/openmbee-prebuild/commit/07a8160d90cee4623540d459df6bbfa1e58597c0<br>
+    <br>
+    2. Update the ```example/src/main/resources/application-test.properties``` to suit your needs. Update ```twc.instances[0].url``` to your twc instance ip. Update ```s3.endpoint=http``` to your openmbee_IP:9000 which points to the docker installed minio instance.
+    3. Update ```ve-feature-remove-rootscope/Dockerfile``` to point to the environment file created in step one where ```ENV VE_ENV``` is set to the name of your cofig file using on the designator, for instance for a config file named config.avian.js set ```ENV VE_ENV config.avian.js``` <br>
+    See commit - https://github.com/avianinc/openmbee-prebuild/commit/5ede19e59ba669587640f6e213fa942cf45b6593<br>
+    <br>
+
+That should do it for the set up. Submit an issue if you have any issues :). 
+<hr>
 
 To get this running you will need docker desktop installed on windows (tested) or docker and docker compose on linux (not tested).
 
 To run open powershell and:
 1. Clone the project: `git clone https://github.com/avianinc/OpenMBEE_mms_4.0.7.git`
 2. `cd` into the cloned directory
-3. `docker compose up`
+3. `docker-compose up`
 
 Thats it... so here are some notes on the features and issues.
 
