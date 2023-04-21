@@ -26,7 +26,7 @@ That should do it for a specialized setup. Submit an issue if you have any issue
 To get this running you will need docker desktop installed on windows (tested) or docker and docker compose on linux (not tested).
 
 To run open powershell and:
-1. Clone the project: `git clone https://github.com/avianinc/OpenMBEE_mms_4.0.7.git`
+1. Clone the project: `git clone https://github.com/avianinc/openmbee-prebuild.git`
 2. `cd` into the cloned directory
 3. `docker-compose up`
 
